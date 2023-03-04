@@ -1,0 +1,528 @@
+@font-face {
+    font-family: main;
+    src: url("../public/fonts/main.otf");
+}
+
+:root {
+
+    --cor0: #e9ebde;
+    --cor1: #b49900;
+    --cor2: #f44336;
+    --cor3: #4CAF50;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.style-form {
+    border: 3px solid var(--cor0);
+    padding: 20px;
+    width: 60%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+}
+
+.centered {
+
+    text-align: center;
+    margin: auto;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--cor0);
+    box-sizing: border-box;
+
+    font-size: large;
+    text-align: center;
+}
+
+button,
+input[type="submit"] {
+    background-color: var(--cor1);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: var(--cor2);
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+.menu-item {
+
+    font-family: Arial;
+    font-size: x-large;
+    text-decoration: none;
+
+    color: var(--cor0);
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: var(--cor1);
+
+    display: flex;
+    justify-content: center;
+}
+
+.topnav li {
+    display: block;
+    color: var(--cor0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav li:hover {
+    background-color: var(--cor0);
+}
+
+.topnav li:hover .menu-item {
+    color: black;
+}
+
+.topnav li.active {
+    background-color: var(--cor3);
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.Login {
+
+    width: 40%;
+}
+
+.flexed {
+
+    display: flex;
+    justify-content: center;
+}
+
+.flexed>input,
+.flexed>label {
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.styled-rule {
+
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0));
+
+    margin: 20px;
+    opacity: 50%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e9e9e9;
+    overflow-x: hidden;
+    padding-top: 90px;
+    font-family: "Poppins", sans-serif;
+    margin: 0 100px;
+}
+
+.profile-header {
+    width: 100%;
+    display: flex;
+    height: 190px;
+    position: relative;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+    float: left;
+    width: 340px;
+    height: 200px;
+}
+
+.profile-img img {
+    border-radius: 50%;
+    height: 230px;
+    width: 230px;
+    border: 5px solid #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    z-index: 5;
+    background: #fff;
+}
+
+.main-bd {
+    width: 100%;
+    display: flex;
+    padding-right: 15px;
+}
+
+button.chatbtn,
+button.createbtn {
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+    background: var(--cor1);
+    color: #fff;
+    font-family: "Bree Serif";
+    font-size: 1rem;
+    margin: 5px 2px;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+button.chatbtn i,
+button.createbtn i {
+    margin-right: 5px;
+}
+
+.user-rating {
+    display: flex;
+}
+
+.user-rating h3 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin-right: 5px;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.user-rating .no-of-user-rate {
+    font-size: 0.9rem;
+}
+
+.rate {
+    padding-top: 6px;
+}
+
+.rate i {
+    font-size: 0.9rem;
+    color: var(--cor2);
+}
+
+.nav {
+    width: 100%;
+    z-index: -1;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    height: 40px;
+    background: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav ul li {
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav ul li:hover,
+.nav ul li.active {
+    box-shadow: 0px -3px 0px rgba(288, 0, 70, 0.9) inset;
+}
+
+.profile-body {
+    width: 100%;
+    z-index: -1;
+}
+
+.tab {
+    display: none;
+}
+
+.tab {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .profile-side {
+        width: 250px;
+        padding: 90px 15px 20px;
+    }
+
+    .profile-img img {
+        height: 200px;
+        width: 200px;
+        left: 50px;
+        top: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        margin: 0 20px;
+    }
+
+    .profile-img {
+        float: left;
+        width: 100%;
+        height: 200px;
+    }
+
+    .profile-img img {
+        position: relative;
+        height: 200px;
+        width: 200px;
+        left: 0px;
+    }
+
+    .profile-nav-info {
+        text-align: center;
+    }
+
+    .profile-option {
+        right: 20px;
+        top: 75%;
+        transform: translateY(50%);
+    }
+
+    .main-bd {
+        flex-direction: column;
+        padding-right: 0;
+    }
+
+    .profile-side {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        margin: 5px 0;
+    }
+
+    .profile-nav-info .address {
+        justify-content: center;
+    }
+
+    .user-rating {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .profile-header h3 {}
+
+    .profile-option {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 15px;
+        top: 83%;
+    }
+
+    .profile-option .notification .alert-message {
+        top: -3px;
+        right: -4px;
+        padding: 4px;
+        height: 15px;
+        width: 15px;
+        font-size: 0.7rem;
+    }
+
+    .profile-nav-info h3 {
+        font-size: 1.9rem;
+    }
+
+    .profile-nav-info .address p,
+    .profile-nav-info .address span {
+        font-size: 0.7rem;
+    }
+}
+
+#see-more-bio,
+#see-less-bio {
+    color: blue;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+.tab h1 {
+    font-family: "Bree Serif", sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.style0 {
+
+    color: cornflowerblue;
+}
+
+.icon {
+
+    width: 80px;
+}
+
+.lib-card {
+
+    width: 33%;
+    text-align: justify;
+
+    float: left;
+    margin: 20px;
+
+    height: 500px;
+    overflow: scroll;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Firefox */
+
+    padding: 30px;
+}
+
+.smallbtn {
+
+    width: fit-content;
+    margin: 20px;
+
+    font-family: main;
+    font-size: 20px;
+
+    border-radius: 10px;
+}
+
+.content-tab {
+
+    margin: 20px;
+    padding: 10px;
+}
+
+.content-tab h2 {
+
+    background-color: var(--cor1);
+    padding: 10px;
+
+    border-radius: 10px 10px 0px 0px;
+}
+
+.content-tab p {
+
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgb(201, 201, 201);
+}
+
+.centered-icon-text img {
+
+    position: relative;
+    top: 14px;
+}
+
+.footer {
+
+    position: relative;
+    top: 30px;
+    right: 50px;
+}
+
+.fa:hover {
+    opacity: 0.9;
+}
+
+.fa-youtube {
+    background: #cb2027;
+    color: white;
+}
+
+.fa-github {
+    background: #292929;
+    color: white;
+}
+
+.fa-twitter {
+    background: #007bb5;
+    color: white;
+}
+
+
+.fa-paypal {
+    background: #5a0648;
+    color: white;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 5px 50px;
+
+    border-radius: 50%;
+}
+
+.profile {
+
+    margin: auto 0;
+}
+
+.profile h3 {
+
+    font-size: xx-large;
+}
+
+.profile span {
+
+    color: #474747;
+}
