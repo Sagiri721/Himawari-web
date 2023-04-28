@@ -25,6 +25,25 @@ recordRoutes.route("/recordLibraries").get(function (req, res) {
   });
 });
 
+recordRoutes.route("/recordFomCollection").post(function (req, res) {
+  let db_connect = dbo.getDb();
+
+  if(req.body.query.id !== undefined){
+
+    db_connect.collection(req.body.collection).find({_id: ObjectId(req.body.query.id)}).toArray(function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+
+  }else{
+
+    db_connect.collection(req.body.collection).find(req.body.query).toArray(function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+  }
+
+});
 
 recordRoutes.route("/recordFromName").post(function (req, res) {
   let db_connect = dbo.getDb();
@@ -85,6 +104,15 @@ recordRoutes.route("/delete").post((req, response) => {
   });
 });
 
+recordRoutes.route("/deleteFromCollection").post((req, response) => {
+  let db_connect = dbo.getDb();
+  db_connect.collection(req.body.collection).deleteOne({_id: ObjectId(req.body.id)}, function (err, obj) {
+    if (err) throw err;
+    console.log("1 document deleted" + req.username);
+    response.json(obj);
+  });
+});
+
 recordRoutes.route("/deleteClass").post((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { name: req.body.name };
@@ -92,6 +120,24 @@ recordRoutes.route("/deleteClass").post((req, response) => {
     if (err) throw err;
     console.log("1 document deleted" + req.username);
     response.json(obj);
+  });
+});
+
+recordRoutes.route("/insert").post((req, response) => {
+
+  const db_connect = dbo.getDb();
+  db_connect.collection(req.body.collection).insertOne(req.body.obj, function (err, res) {
+    if (err) throw err;
+    response.json(res);
+  });
+});
+
+recordRoutes.route("/updateFromCollection").post((req, response) => {
+
+  const db_connect = dbo.getDb();
+  db_connect.collection(req.body.collection).updateOne(req.body.query, req.body.update, function (err, res) {
+    if (err) throw err;
+    response.json(res);
   });
 });
 

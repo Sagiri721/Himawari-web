@@ -29,7 +29,7 @@ function Libraries() {
 
         getLibs();
 
-    }, []);
+    }, [libraries]);
 
     return (
         <div className="library">

@@ -38,6 +38,11 @@ function Docs() {
                     <br />
                     <a href="https://github.com/Sagiri721/Himawari-Docs">Repository</a><br />
                     <a href="https://obsidian.md/">More about Obsidian</a>
+
+                    <br />
+                    Get started with markdown documentation in one line!
+                    <br />
+                    <code>git clone https://github.com/Sagiri721/Himawari-Docs.git</code>
                 </p>
 
             </div>

@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: main;
     src: url("../public/fonts/main.otf");
@@ -29,7 +30,8 @@ body {
 }
 
 input[type=text],
-input[type=password] {
+input[type=password],
+textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -55,6 +57,13 @@ input[type="submit"] {
 button:hover,
 input[type="submit"]:hover {
     opacity: 0.8;
+}
+
+.question-form {
+
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
 }
 
 .cancelbtn {
@@ -525,4 +534,90 @@ button.createbtn i {
 .profile span {
 
     color: #474747;
+}
+
+.cards {
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+
+    text-decoration: none;
+    color: black;
+    background-color: lightgrey;
+    width: fit-content;
+    font-family:'Courier New', Courier, monospace;
+    padding: 30px;
+
+    transition-duration: 600ms;
+    transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    margin: 10px;
+}
+
+.card:hover {
+
+    transform: translate(0, 20px) rotate(3deg);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.267);
+}
+
+.w-100{
+
+    width: 100px;
+    height: 100px;
+}
+
+code {
+
+    background-color: lightgray;
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.center {
+
+	display: grid;
+	place-items: center;
+}
+
+.big {
+
+    font-size: x-large;
+}
+
+.question > img{
+
+    width: 100px;
+    border-radius: 50%;
+}
+
+.question {
+
+    margin: 1rem;
+    padding: 2rem 2rem;
+}
+
+.child {
+
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+
+.question > button {
+
+    font-size: x-large;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.smallbtn2{
+
+    width: fit-content !important;
+    border-radius: 20px;
+    vertical-align: middle;
 }

@@ -11,6 +11,7 @@ import { faBalanceScale, faBook, faDoorOpen, faHouse, faMessage, faPerson, faPuz
 import License from './pages/License';
 import Forum from './pages/Forum';
 import Docs from './pages/Documentation';
+import Download from './pages/Download';
 
 export const roles = ["Admin", "Helper", "Developer", "User"];
 
@@ -51,6 +52,7 @@ root.render(
         <Route path="/License" element={<License />} />
         <Route path="/Forum" element={<Forum />} />
         <Route path="/Docs" element={<Docs />} />
+        <Route path="/Downloads" element={<Download />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
